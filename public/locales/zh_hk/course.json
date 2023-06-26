@@ -1,0 +1,24 @@
+{
+  "extend-period": "你的一個月無限觀看{{course}}課程時間己到期，如想繼續觀看，請支付所須費用。",
+  "welcome-newuser": "歡迎你登入{{course}}課程!!現在只須$450，你將擁有一個月無限觀看時間!!包括 ...",
+  "course-content": ["5 ~ 15分鐘雲端錄像視頻(共約30段)", "精美雲端筆記(共約30份)", "免費响Telegram你問我答問問題"],
+  "course-number": "課程章節",
+  "course-type": "課程種類",
+  "course-expired": "課程使用期到{{expiredDate}}",
+  "payment": {
+    "stripe": "STRIPE支付",
+    "fps": "轉數快"
+  },
+  "policy": "條款與細則",
+  "recipt-title": "{{course}}線上課程收據",
+  "recipt-message": "* 請保留收據,方便日後核對資料",
+  "recipt-content": {
+    "transactionId": "收據編號: {{objectId}}",
+    "userName": "使用者姓名/電郵: {{userName}}",
+    "item": "購買物品: {{item}}",
+    "cost": "價格: ${{price}} {{currency}}",
+    "startDate": "開始日期: {{startDate}}",
+    "expiredDate": "到期日期: {{expiredDate}}",
+    "remarks": "備註: {{remarks}}"
+  }
+}

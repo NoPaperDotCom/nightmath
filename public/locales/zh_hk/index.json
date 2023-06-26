@@ -1,0 +1,63 @@
+{
+  "home-tutorial-title": "實體教學",
+  "home-tutorial-content": ["兩星期共30小時極速補底課程", "唔識到考試只須30小時(可用ZOOM上課)"],
+  "home-online-title": "線上網課",
+  "home-online-content": ["全新數學補習體驗", "一個價錢, 一個月內, 無限重温, 唔識loop到識"],
+  "tutorial-course-title": "課程大綱",
+  "tutorial-course-content": {
+    "core": {
+      "name": "30小時Core補底課程",
+      "details": ["3小時 - 基礎", "12小時 - 代數", "6小時 - 幾何", "6小時 - 統計"],
+      "type": ["實體", "ZOOM"],
+      "price": "費用: $2550"
+    },
+    "m1": {
+      "name": "30小時M1補底課程",
+      "details": ["3小時 - 基礎", "12小時 - 微積分", "3小時 - 概率", "6小時 - 離散分佈", "6小時 - 連續分佈"],
+      "type": ["實體", "ZOOM"],
+      "price": "費用: $2550"
+    },
+    "m2": {
+      "name": "30小時M2補底課程",
+      "details": ["3小時 - 基礎", "3小時 - 三角", "12小時 - 微積分", "6小時 - 矩陣", "6小時 - 向量"],
+      "type": ["實體", "ZOOM"],
+      "price": "費用: $2550"
+    },
+    "group": {
+      "name": "1-6人小組斑",
+      "details": ["專題研習", "功課私補", "考試備戰", "按小時收費"],
+      "type": ["實體"],
+      "price": "費用: $200/小時"
+    },
+    "assessment": {
+      "name": "數學評估",
+      "details": ["試卷測試", "能力評估", "數底分析", "建議改善方法"],
+      "type": ["實體"],
+      "price": "費用: 免費"
+    }
+  },
+  "tutorial-timetable-title": "時間表",
+  "tutorial-timetable-intensive": "30小時補底課程",
+  "tutorial-timetable-1to1": "1-6人小組斑",
+  "tutorial-timetable-free-assessment": "免費數學評估",
+  "tutorial-timetable-rest": "休息",
+  "online-description": ["全新數學補習體驗", "無限重温筆記視頻", "Telegram你問我答", "考試無難度"],
+  "online-title": "只須$450 你將擁有 ...",
+  "online-video-title": "雲端視頻教學",
+  "online-video-content": "大量雲端視頻教學供觀看，隨時隨地學習，一個月內無限次翻看，由不懂到精通。",
+  "online-note-title": "精美雲端筆記",
+  "online-note-content": "大量雲端筆記本供閱讀，所有筆記本針對特定題材悉心製作，一個月內無限次閱讀。",
+  "online-telegram-title": "Telegram你問我答",
+  "online-telegram-subtitle": "唔怕你唔識 最驚你唔問",  
+  "online-telegram-content": "加入Telegram你問我答群組，拍下唔識題目並上傳，我們會為你解答。",
+  "online-pastpaper-title": "歷年PastPaper模擬試題答案",
+  "online-join": "立即登入,享受與眾不同補習體驗!!",
+  "about-teachers-list": {
+    "andrew": {
+      "name": "Andrew Li",
+      "subjects": "數學",
+      "introduction": "畢業於香港大學機械工程（一級榮譽畢業），隨後於中文大學取得數學系碩士証書及於香港大學取得屋宇設備工程碩士証書。在香港公開試數學取得全A成積（HKCEE 數學及附加數學 - A, HKAL 純數及應用數學 - A)。畢業後參與數學補習十多年，成立此教室目的是希望推廣正確數學觀，幫助有需要的人。"
+    }
+  },
+  "about-view-resume": "觀看履歷資格"
+}

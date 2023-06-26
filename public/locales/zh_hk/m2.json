@@ -1,0 +1,126 @@
+{
+  "terms": "歡迎選購M2線上課程，選購前請先細閱使用條款({{link}})。一經購買，代表你已經同意條款上的使用守則。",
+  "recipts": {
+    "online-one-month": "一個月M2線上課程",
+    "offline-two-weeks": "兩星期M2極速補底課程",
+    "offline-hourly": "1-6人小組斑"
+  },
+  "detail": {
+    "1.01": {
+      "title": "課程1.01 - 基本認識",
+      "description": "DSE M2 課程基本認識第一部, 當中談談M1同M2分別及了解M2需要學什麼."
+    },
+    "1.02": {
+      "title": "課程1.02 - 集合及証明",
+      "description": "DSE M2 課程基本認識第二部, 當中談談集合, M2常用的証明方法, 數學歸納法的理論及其實作過程."
+    },
+    "2.01": {
+      "title": "課程2.01 - 三角基本公式",
+      "description": "DSE M2 課程三角第一部, 當中談談進階三角基本認識, 包括角度單位, 定義及轉換. 另介紹三角函數應用及由來."
+    },
+    "2.02": {
+      "title": "課程2.02 - 三角公式推演",
+      "description": "DSE M2 課程三角第二部, 講解M2世界常用的三角公式及其証明, 包括複角及雙角公式等."
+    },
+    "2.03": {
+      "title": "課程2.03 - 三角方程",
+      "description": "DSE M2 課程三角第三部, 當中談談如何解各種三角方程."
+    },
+    "3.01": {
+      "title": "課程3.01 - 認識Limit",
+      "description": "DSE M2 課程微積分第一部, 當中介紹微分最重要概念-Limit 包括它的定義, 運算及應用."
+    },
+    "3.02": {
+      "title": "課程3.02 - 微分基本運算",
+      "description": "DSE M2 課程微積分第二部, 當中介紹微分定義, 它與Limit的關係及一些基本公式運算."
+    },
+    "3.03": {
+      "title": "課程3.03 - 續微分運算",
+      "description": "DSE M2 課程微積分第三部, 當中繼續介紹微分其他運算方法, 包括Implicit微分法."
+    },
+    "3.04": {
+      "title": "課程3.04 - 微分應用",
+      "description": "DSE M2 課程微積分第四部, 當中介紹微分應用, 包括幾何及Rate of change."
+    },
+    "3.05": {
+      "title": "課程3.05 - 繪圖",
+      "description": "DSE M2 課程微積分第五部, 當中重點說明如何繪圖 (Curve Sketching)."
+    },
+    "3.06": {
+      "title": "課程3.06 - 不定積分基本運算",
+      "description": "DSE M2 課程微積分第六部, 當中介紹積分定義, 它與微分的關係及一些基本公式運算."
+    },
+    "3.07": {
+      "title": "課程3.07 - 續不定積分運算",
+      "description": "DSE M2 課程微積分第七部, 當中繼續介紹積分其他運算方法, 包括積分三大法寶: 積分代入, Integration by part及Partial fraction."
+    },
+    "3.08": {
+      "title": "課程3.08 - 三⻆不定積分",
+      "description": "DSE M2 課程微積分第八部, 當中介紹如何處理三⻆積分"
+    },
+    "3.09": {
+      "title": "課程3.09 - 不定積分應用",
+      "description": "DSE M2 課程微積分第九部, 當中介紹不定積分應用, 包括幾何及Rate of change."
+    },
+    "3.1": {
+      "title": "課程3.10 - 定積分基本運算",
+      "description": "DSE M2 課程微積分第十部, 當中介紹定積分定義及計算."
+    },
+    "3.11": {
+      "title": "課程3.11 - 定積分實作",
+      "description": "DSE M2 課程微積分第十一部, 當中介紹如何利用定積分計算面積."
+    },
+    "3.12": {
+      "title": "課程3.12 - 體積計算",
+      "description": "DSE M2 課程微積分第十二部, 當中介紹如何利用定積分計算體積."
+    },
+    "4.01": {
+      "title": "課程4.01 - Vector的基本概念",
+      "description": "DSE M2 課程Vector及矩陣第一部, 當中介紹Vector概念, 包括它的定義及基本運算."
+    },
+    "4.02": {
+      "title": "課程4.02 - 2D Vector",
+      "description": "DSE M2 課程Vector及矩陣第二部, 當中介紹2D Vector基本公式運算."
+    },
+    "4.03": {
+      "title": "課程4.03 - 2D Vector幾何計算",
+      "description": "DSE M2 課程Vector及矩陣第三部, 當中繼續介紹2D Vector運算方法及一些實際例子."
+    },
+    "4.04": {
+      "title": "課程4.04 - 3D Vector",
+      "description": "DSE M2 課程Vector及矩陣第四部, 當中介紹3D Vector基本公式運算."
+    },
+    "4.05": {
+      "title": "課程4.05 - 3D Vector幾何計算",
+      "description": "DSE M2 課程Vector及矩陣第五部, 當中繼續介紹3D Vector運算方法及一些實際例子."
+    },
+    "4.06": {
+      "title": "課程4.06 - 線性代數方程",
+      "description": "DSE M2 課程Vector及矩陣第六部, 當中介紹如何利用消去法解線性代數方程."
+    },
+    "4.07": {
+      "title": "課程4.07 - 解三元方程",
+      "description": "DSE M2 課程Vector及矩陣第七部, 當中介紹如何利用消去法解三元方程及三元方程的幾何關係."
+    },
+    "4.08": {
+      "title": "課程4.08 - 矩陣",
+      "description": "DSE M2 課程Vector及矩陣第八部, 當中介紹矩陣由來及基本運算."
+    },
+    "4.09": {
+      "title": "課程4.09 - Determinant",
+      "description": "DSE M2 課程Vector及矩陣第九部, 當中介紹Determinant由來, 計算及應用."
+    },
+    "4.1": {
+      "title": "課程4.10 - 矩陣與多元方程",
+      "description": "DSE M2 課程Vector及矩陣第十部, 當中介紹如何利用矩陣解多元方程."
+    },
+    "4.11": {
+      "title": "課程4.11 - Eigenvalue And Eigenvector",
+      "description": "DSE M2 課程Vector及矩陣第十一部, 當中介紹如何利用矩陣計算Eigenvalue及Eigenvector, 及Eigenvalue及Eigenvector應用及由來."
+    },
+    "4.12": {
+      "title": "課程4.12 - 幾何",
+      "description": "DSE M2 課程Vector及矩陣第十二部, 當中介紹如何利用矩陣(Transformation Matrix)計算座標幾何中移位."
+    }
+  }
+}
