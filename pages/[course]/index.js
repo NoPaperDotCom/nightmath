@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Layout, Footer, Navbar } from "@/components/brand";
 import { PDFModal, VideoModal, IntroductionModal } from "@/components/modal";
 
-import { validUserSessionToken, retrieveParseObjects, getAvailableCourse } from "@/utils/parse";
+import { callMethod as parseCallMethod, getAvailableCourse } from "@/utils/parse";
 import AppError from "@/utils/error";
 
 import {
@@ -189,6 +189,19 @@ export default function CourseIndex({ locale, course, policyUrl }) {
   
     if (!_sessionToken || _sessionToken.length === 0) { _router.replace(`/${course}/oauth/google?requestLink=1`); }
     else {
+      parseCallMethod(course, "retrieveProducts", { sessionToken: _sessionToken }, _abortController)
+      .then(({ status, user, products = [] }) => {
+        _userRef.current = user;
+        if (status !== "purchased") { throw new AppError({ text: status, status: 401 }); }
+        return _setSetting(old => ({ ...old, status: "purchased", sessionToken: _sessionToken, products: products.sort((a, b) => a.courseNumber - b.courseNumber) }));
+      })
+      .catch(error => {
+        if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
+        if (error.message.indexOf("notpurchase") !== -1){ return _setSetting(old => ({ ...old, status: "notpurchase" })); }
+        if (error.message.indexOf("expired") !== -1) { return _setSetting(old => ({ ...old, status: "expired" })); }
+        return _router.replace(`/${course}/error?message=${error.message}`);
+      });
+/*
       validUserSessionToken(course, _sessionToken, _abortController)
       .then(user => {
         if (user instanceof Error) { throw user; }
@@ -206,11 +219,12 @@ export default function CourseIndex({ locale, course, policyUrl }) {
         return _setSetting(old => ({ ...old, status: "purchased", sessionToken: _sessionToken, products: products.sort((a, b) => a.courseNumber - b.courseNumber) }));
       })
       .catch(error => {
-        // if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
+        if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
         if (error.message.indexOf("notpurchase") !== -1){ return _setSetting(old => ({ ...old, status: "notpurchase" })); }
         if (error.message.indexOf("expired") !== -1) { return _setSetting(old => ({ ...old, status: "expired" })); }
-        // return _router.replace(`/${course}/error?message=${error.message}`);
+        return _router.replace(`/${course}/error?message=${error.message}`);
       });
+*/
     }
 
     return () => _abortController.abort();
