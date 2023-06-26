@@ -39,11 +39,7 @@ const HomeSectorCard = ({ title, content, detailRef, actionHandler, detailText, 
       <Block size={[1, true]}>
         <Text size={_textSize(3)} weight={2} color={{ s: 0.8, l: 0.7 }}>{title}</Text>
       </Block>
-      {content.map((c, idx) =>
-        <Block key={idx} size={[1, true]}>
-          <Text size={_textSize(1.2)} weight={1} color={{ s: 0.8, l: 0.8 }}>{c}</Text>
-        </Block>
-      )}
+      {content}
       <Flex size={[1, true]} gap={_gap()} padding={1}>
         {["Core", "M1", "M2"].map(course => 
           <FillBtn key={course} rounded="{}" size={0.25, "s"} color={{ h: -120, s: 0.5, l: 0.5 }} focusScaleEffect={0.8} onClick={() => actionHandler(course)}>
