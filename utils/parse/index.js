@@ -41,13 +41,15 @@ export const callMethod = async (course, name, params = {}, abortController = ne
 export const validUserSessionToken = async (course, sessionToken = "", abortController = new AbortController()) => {
   try {
     const _response = await _fetch("/users/me", course, "GET", { "X-Parse-Session-Token": sessionToken }, {}, abortController);
-    if (_response.status !== 200) { return new AppError({ text: "session-invalidation", status: _response.status, message: _response.statusText }); }
+    if (_response.status !== 200) {
+      console.log(_response.statusText);
+      return new AppError({ text: "session-invalidation", status: _response.status, message: _response.statusText }); 
+    }
 
     const _user = await _response.json();
     if (_user.code === 209) { return new AppError({ text: "session-invalidation", status: 209, message: _user.error }); }
     return { objectId: _user.objectId, name: _user.name, email: _user.email, expiredDate: _user.expiredDate, sessionToken }; 
   } catch (error) {
-    console.error(error);
     return new AppError({ message: error.message });
   }
 };
