@@ -13,7 +13,7 @@ import {
 import { M } from "de/utils";
 
 import { Layout, Footer, Banner } from "@/components/brand";
-import { validUserSessionToken, callMethod, getAvailableCourse } from "@/utils/parse";
+import { callMethod, getAvailableCourse } from "@/utils/parse";
 import AppError from "@/utils/error";
 
 
@@ -112,8 +112,10 @@ export async function getServerSideProps({ params, query, locale, req, res }) {
       };
     }
 
-    const _user = await validUserSessionToken(_course, sessionToken);
-    if (_user instanceof Error) {
+    console.log(sessionToken);
+    const _user = await callMethod(_course, "verifyUser", { sessionToken });
+    console.log(_user);
+    if (_user.error) {
       return {
         redirect: {
           destination: "/",
