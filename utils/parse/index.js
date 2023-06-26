@@ -47,6 +47,7 @@ export const validUserSessionToken = async (course, sessionToken = "", abortCont
     if (_user.code === 209) { return new AppError({ text: "session-invalidation", status: 209, message: _user.error }); }
     return { objectId: _user.objectId, name: _user.name, email: _user.email, expiredDate: _user.expiredDate, sessionToken }; 
   } catch (error) {
+    console.error(error);
     return new AppError({ message: error.message });
   }
 };
