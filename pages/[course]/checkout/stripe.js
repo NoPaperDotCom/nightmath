@@ -112,16 +112,14 @@ export async function getServerSideProps({ params, query, locale, req, res }) {
       };
     }
 
-    console.log(sessionToken);
     const _user = await callMethod(_course, "verifyUser", { sessionToken });
-    console.log(_user);
     if (_user.error) {
       return {
         redirect: {
           destination: "/",
           permanent: false
         }
-      };    
+      };
     }
 
     // checkout cancelled
