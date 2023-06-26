@@ -206,7 +206,7 @@ export default function CourseIndex({ locale, course, policyUrl }) {
         return _setSetting(old => ({ ...old, status: "purchased", sessionToken: _sessionToken, products: products.sort((a, b) => a.courseNumber - b.courseNumber) }));
       })
       .catch(error => {
-        if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
+        // if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
         if (error.message.indexOf("notpurchase") !== -1){ return _setSetting(old => ({ ...old, status: "notpurchase" })); }
         if (error.message.indexOf("expired") !== -1) { return _setSetting(old => ({ ...old, status: "expired" })); }
         return _router.replace(`/${course}/error?message=${error.message}`);
