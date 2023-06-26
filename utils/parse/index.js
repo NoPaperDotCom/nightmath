@@ -40,6 +40,7 @@ export const callMethod = async (course, name, params = {}, abortController = ne
 
 export const validUserSessionToken = async (course, sessionToken = "", abortController = new AbortController()) => {
   try {
+    console.log(sessionToken);
     const _response = await _fetch("/users/me", course, "GET", { "X-Parse-Session-Token": sessionToken }, {}, abortController);
     if (_response.status !== 200) {
       console.log(_response.statusText);
