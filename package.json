@@ -25,9 +25,5 @@
     "react-pdf": "^6.2.2",
     "stripe": "^12.5.0",
     "video-react": "^0.16.0"
-  },
-  "devDependencies" : { 
-    "readline-sync": "^1.4.10",
-    "parse": "^4.1.0" 
   }
 }
