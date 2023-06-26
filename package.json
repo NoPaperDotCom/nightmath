@@ -1,0 +1,33 @@
+{
+  "name": "nightmaths",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "upload": "node ./scripts/uploadproducts.js",
+    "enroll": "node ./scripts/enroll.js",
+    "enquiry": "node ./scripts/enquiry.js"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^1.52.1",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "googleapis": "^118.0.0",
+    "i18next": "^22.4.15",
+    "next": "13.4.1",
+    "next-i18next": "^13.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.2.2",
+    "react-pdf": "^6.2.2",
+    "stripe": "^12.5.0",
+    "video-react": "^0.16.0"
+  },
+  "devDependencies" : { 
+    "readline-sync": "^1.4.10",
+    "parse": "^4.1.0" 
+  }
+}
