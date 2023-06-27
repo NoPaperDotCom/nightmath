@@ -192,7 +192,7 @@ export async function getServerSideProps({ params, query, locale, req, res }) {
         quantity: 1
       })),
       customer_email: _user.email,
-      payment_method_types: ["card", "alipay", "wechat_pay"],
+      payment_method_types: ["card", "wechat_pay"],
       payment_method_options: {
         wechat_pay: {
           client: "web"
