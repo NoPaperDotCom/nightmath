@@ -51,7 +51,7 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
   const [_setting, _setSetting] = React.useState({ loading: true, title: "", content: "", onClick: () => true });
   useMethod(id, "setContent", ({ content, title, onClick }) => {
     _setSetting(old => ({ ...old, title, loading: true }));
-    fetch(`/api/${course}/user?sessionToken=${_sessionToken}`)
+    fetch(`/api/${course}/user?sessionToken=${sessionToken}`)
     .then(response => response.json())
     .then(({ expired }) => {
       if (!expired) { return _setSetting({ loading: false, title, content, onClick }); }
