@@ -33,7 +33,7 @@ const _gap = (scale = 1) => M(1 * scale, "#", "#", 2 * scale, "#");
 
 const Loading = () => (
   <Flex padding={0}>
-    <Spin size={0.45} color={{ s: 0.25, l: 0.5 }} />
+    <Spin size={0.4} color={{ s: 0.25, l: 0.5 }} />
   </Flex>
 );
 
