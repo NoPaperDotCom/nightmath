@@ -73,7 +73,7 @@ export default function OAuthPage({ course, sessionToken }) {
   return (
     <Layout>
       <Flex baseStyle={{ minSize: [1, 1] }}>
-        <Spin size={0.5} color={{ s: 0.25, l: 0.5 }} />
+        <Spin size={0.4} color={{ s: 0.25, l: 0.5 }} />
       </Flex>
     </Layout>
   )
