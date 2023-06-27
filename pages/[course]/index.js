@@ -194,7 +194,7 @@ export default function CourseIndex({ locale, course, policyUrl }) {
       .then(({ status, user, products = [] }) => {
         _userRef.current = user;
         if (status !== "purchased") { throw new AppError({ text: status, status: 401 }); }
-        return; // _setSetting(old => ({ ...old, status: "purchased", sessionToken: _sessionToken, products: products.sort((a, b) => a.courseNumber - b.courseNumber) }));
+        return _setSetting(old => ({ ...old, status: "purchased", sessionToken: _sessionToken, products: products.sort((a, b) => a.courseNumber - b.courseNumber) }));
       })
       .catch(error => {
         if (error.message.indexOf("session-invalidation") !== -1) { return _router.replace(`/${course}/oauth/google?requestLink=1`); }
