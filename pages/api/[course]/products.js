@@ -5,6 +5,5 @@ export default async (req, res) => {
   const _sessionToken = req.query.sessionToken;
   const _course = req.query.course
   const { status, user = { sessionToken: _sessionToken }, products = [] } = await callMethod(_course, "retrieveProducts", { sessionToken: _sessionToken });
-  console.log(status);
   return res.status(200).json({ status, user, products });
 }
