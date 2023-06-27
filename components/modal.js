@@ -51,7 +51,9 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
   const [_setting, _setSetting] = React.useState({ loading: true, title: "", content: "", onClick: () => true });
   useMethod(id, "setContent", ({ content, title, onClick }) => {
     _setSetting(old => ({ ...old, title, loading: true }));
-    callMethod(course, "checkExpired", { sessionToken }).then(({ expired }) => {
+    fetch(`/api/${course}/user?sessionToken=${_sessionToken}`)
+    .then(response => response.json())
+    .then(({ expired }) => {
       if (!expired) { return _setSetting({ loading: false, title, content, onClick }); }
       return setSetting(old => ({ ...old, status: "expired" }));
     }).catch(error => router.replace(`/${course}/error?message=${error.message}`));
@@ -61,7 +63,7 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
     <Modal id={id} title={_setting.title}>
       {(_setting.loading) ? (
         <Flex>
-          <Spin size={0.5} color={{ s: 0.5, l: 0.5 }} />
+          <Spin size={0.4} color={{ s: 0.5, l: 0.5 }} />
         </Flex>
       ) : ( 
         <>
