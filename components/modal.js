@@ -152,14 +152,12 @@ export const VideoModal = ({ id = "", errorContent = "" }) => {
     if (!_setting.error) {
       _playerRef.current.pause();
     }
-    
-    _setSetting(oldSetting => ({ ...oldSetting, error: false, src: "" }));
   };
 
   return (
     <Modal id={id} title={_setting.title} itemPosition={["center", "center"]} onClose={onClose}>
       {
-        (_setting.src.length === 0) ? null : _setting.error ? (
+        _setting.error ? (
           <Flex>
             <Text size={2} weight={2} color={{ h: -240, s: 0.5, l: 0.5 }} >{errorContent}</Text>
           </Flex>
