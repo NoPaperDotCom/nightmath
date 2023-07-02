@@ -1,9 +1,9 @@
 {
   "app-title": "錯誤",
-  "internal": "抱歉做成不便, 我們現正努力搶修伺服器，不便之處，敬請原諒。",
-  "parse-error": "抱歉做成不便, 我們現正努力搶修伺服器，不便之處，敬請原諒。",
+  "internal": "抱歉做成不便, 我們現正努力搶修伺服器，不便之處，敬請原諒。回覆: {{message}}",
+  "parse-error": "抱歉做成不便, 我們現正努力搶修伺服器，不便之處，敬請原諒。回覆: {{message}}",
   "google-signin": "GOOGLE 登入不成功，請再登入。 回覆: {{message}}",
   "session-invalidation": "權限過時，請重新登入。",
-  "stripe-error": "支付伺服器(Stripe)發生故障，現正了解中。",
+  "stripe-error": "支付伺服器(Stripe)發生故障，現正了解中。回覆: {{message}}",
   "payment-invalidation": "你的支付發生問題。回覆: {{message}}"
 }
