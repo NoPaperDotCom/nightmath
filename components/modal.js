@@ -55,6 +55,7 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
     .then(response => response.json())
     .then(({ expired }) => {
       if (!expired) { return _setSetting({ loading: false, title, content, onClick }); }
+      setOverlayDisplay(id, false);
       return setSetting(old => ({ ...old, status: "expired" }));
     }).catch(error => router.replace(`/${course}/error?message=${error.message}`));
   });
@@ -63,7 +64,7 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
     <Modal id={id} title={_setting.title}>
       {(_setting.loading) ? (
         <Flex>
-          <Spin size={0.4} color={{ s: 0.5, l: 0.5 }} />
+          <Spin size={0.3} color={{ s: 0.5, l: 0.5 }} />
         </Flex>
       ) : ( 
         <>
