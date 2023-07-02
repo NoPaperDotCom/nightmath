@@ -64,7 +64,7 @@ export const IntroductionModal = ({ id = "", btnText = "", sessionToken, setSett
     <Modal id={id} title={_setting.title}>
       {(_setting.loading) ? (
         <Flex>
-          <Spin size={0.3} color={{ s: 0.5, l: 0.5 }} />
+          <Spin size={0.1} color={{ s: 0.5, l: 0.5 }} />
         </Flex>
       ) : ( 
         <>
