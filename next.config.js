@@ -5,6 +5,7 @@ const { i18n } = require("./next-i18next.config");
 const nextConfig = {
   // reactStrictMode: true,
   env: {
+    GOOGLE_GTAG_ID: "G-C89W0555EJ",
     FB: "https://www.facebook.com/nightmaths",
     YOUTUBE: "https://www.youtube.com/channel/UCqmGrzx74ldcLu6nV4Bn2OA",
     INSTAGRAM: "https://www.instagram.com/nightmaths/",
