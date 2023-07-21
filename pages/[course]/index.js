@@ -228,7 +228,7 @@ export default function CourseIndex({ locale, course, policyUrl }) {
       <Flex size={(_setting.status !== "purchased") ? 1 : [1, true]} itemPosition={(_setting.status !== "purchased") ? ["center", "center"] : ["start", "start"]} baseStyle={(_setting.status !== "purchased") ? { minSize: [1, 1] } : {}}>
         {(_setting.status !== "loading") ? null : <Loading />}
         {(_setting.status !== "notpurchase" && _setting.status !== "expired") ? null : <PurchaseContent t={t} router={_router} policyUrl={policyUrl} course={course} newUser={_setting.status === "notpurchase"} payments={_payments} />}
-        {(_setting.status !== "purchased") ? null : <IntroductionModal id="course-introduction-modal" btnText={t("view")} sessionToken={_setting.sessionToken} setSetting={_setSetting} course={course}/>}
+        {(_setting.status !== "purchased") ? null : <IntroductionModal id="course-introduction-modal" btnText={t("view")} course={course}/>}
         {(_setting.status !== "purchased") ? null : <PDFModal id="course-pdf-modal" errorContent={t("download-error")} />}
         {(_setting.status !== "purchased") ? null : <VideoModal id="course-video-modal" errorContent={t("download-error")} />}
         {
