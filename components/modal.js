@@ -47,7 +47,7 @@ const Modal = ({ id = "", title = "", onLoad = () => true, itemPosition=["start"
   );
 };
 
-export const IntroductionModal = ({ id = "", btnText = "", sessionToken, course }) => {
+export const IntroductionModal = ({ id = "", btnText = "", course }) => {
   const [_setting, _setSetting] = React.useState({ loading: true, title: "", content: "", onClick: () => true });
   useMethod(id, "setContent", ({ content, title, onClick }) => _setSetting({ loading: false, title, content, onClick }));
 
