@@ -93,7 +93,7 @@ const SelectInput = React.forwardRef(({
 SelectInput.displayName = "SelectInput";
 
 const _formatDate = (date) => `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth()+1).toString().padStart(2, '0')}/${date.getFullYear()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-const ProductListContent = ({ t, course, products, sessionToken, userRef }) => {
+const ProductListContent = ({ t, course, products, sessionToken, setSetting, userRef }) => {
   const [_filter, _setFilter] = React.useState({ ext: { selected: "all", options: ["all"] }, courseNumber: { selected: 0, options: [0] } });
   React.useEffect(() => {
     const _filterSelection = { ext: new Set(["all"]), courseNumber: new Set([0]) };
@@ -148,6 +148,7 @@ const ProductListContent = ({ t, course, products, sessionToken, userRef }) => {
             focusScaleEffect={0.8}
             baseStyle={{ itemPosition: ["start", "center"] }}
             onClick={() => {
+              if ((new Date()).valueOf() > userRef.current.exiredDate) { return setSetting(old => ({ ...old, status: "expired" })); }
               callMethod("course-introduction-modal", "setContent", {
                 content: `(${t(prod.ext)}) - ${_locales[`${prod.courseNumber}`].description}`,
                 title: _locales[`${prod.courseNumber}`].title,
@@ -238,6 +239,7 @@ export default function CourseIndex({ locale, course, policyUrl }) {
               sessionToken={_setting.sessionToken}
               products={_setting.products}
               userRef={_userRef}
+              setSetting={_setSetting}
             />
         }
       </Flex>
