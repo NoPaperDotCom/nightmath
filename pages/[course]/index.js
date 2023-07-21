@@ -150,7 +150,6 @@ const ProductListContent = ({ t, course, products, sessionToken, setSetting, use
             onClick={() => {
               const _now = (new Date()).valueOf();
               const _expiredDate = userRef.current.expiredDate;
-              window.alert(`${_now} > ${_expiredDate}`);
               if (_now > _expiredDate) { return setSetting(old => ({ ...old, status: "expired" })); }
               callMethod("course-introduction-modal", "setContent", {
                 content: `(${t(prod.ext)}) - ${_locales[`${prod.courseNumber}`].description}`,
