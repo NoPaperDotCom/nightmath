@@ -84,7 +84,11 @@ export const PDFModal = ({ id = "", errorContent = "" }) => {
   }, [event]);
 
   useMethod(id, "setPDFSrc", ({ src, title }) => {
-    _setSetting({ width: _width(), src, title, numOfPages: 0 });
+    if (src === _setting.src) {
+      return  _setSetting(oldSetting => ({ ...oldSetting, width: _width() }));
+    }
+    
+    return _setSetting({ width: _width(), src, title, numOfPages: 0 });
   });
 
   const _onDocumentLoadSuccess = (pdf) => _setSetting(oldSetting => ({ ...oldSetting, width: _width(), numOfPages: pdf.numPages }));
